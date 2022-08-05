@@ -1,0 +1,14 @@
+[package]
+name = "is31fl3235a"
+version = "0.0.1"
+authors = ["Anton Glukhov <anton.a.glukhov@gmail.com>"]
+edition = "2022"
+description = "A rust-embedded driver for the Lumissil Microsystems IS31FL3235a LED driver"
+keywords = ["embedded-hal", "driver", "led", "is31fl3235a", "lumissil"]
+categories = ["embedded", "hardware-support", "no-std"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/toxxin/is31fl3235a"
+
+[dependencies]
+embedded-hal = { version = "0.2.4", features = ["unproven"] }
