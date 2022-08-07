@@ -6,6 +6,8 @@
 
 use embedded_hal::blocking::i2c::Write;
 
+const CH_NUM: u8 = 28;
+
 /// Is31fl3235a Error.
 #[derive(Debug, Copy, Clone)]
 pub enum Error<E> {
@@ -114,7 +116,7 @@ impl<I2C, E> Is31fl3235a<I2C>
 
     pub fn set_pwm(&mut self, ch: u8, value: u8) -> Result<(), E> {
 
-        // TODO: add channel number validation
+        assert!(ch <= CH_NUM);
 
         let mut temp = [(Register::Pwm as u8) + ch - 1, value];
         self.i2c.write(self.addr, &temp)?;
