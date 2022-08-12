@@ -26,9 +26,9 @@ pub enum Register {
     Pwm = 0x05,
     /// Update the PWM
     Update = 0x25,
-    /// Channel [28:1] PWM register byte
+    /// Channel [28:1] control register byte
     LedControl = 0x2A,
-    /// Control Control register
+    /// Global Control register
     GlobalControl = 0x4A,
     /// OutputFrequency register
     OutputFrequency = 0x4B,
